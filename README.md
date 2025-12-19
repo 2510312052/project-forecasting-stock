@@ -54,7 +54,7 @@ uas-forecasting-stock/
 1. **Clone repo:**
 ```bash
 git clone https://github.com/username/uas-forecasting-stock.git
-
+```
 ---
 
 ### 2. Install Dependencies
