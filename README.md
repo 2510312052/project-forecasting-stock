@@ -48,14 +48,34 @@ uas-forecasting-stock/
 └── README.md
 
 
----
+---                                          
 
 ## 📌 Instalasi & Menjalankan Aplikasi
 1. **Clone repo:**
 ```bash
 git clone https://github.com/username/uas-forecasting-stock.git
 
-2. Install dependencies
 
+2. **Install dependencies:**
+
+```bash
+npm install
+
+3. **Setup database:**
+
+```bash
+npm run db:setup
+
+4. **Jalankan aplikasi:**
+
+```bash
+npm run dev
+
+5. **Buka browser:**
+
+```text
+http://localhost:3000
+
+📁 Struktur Project
 bash
 npm install
