@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>
+        <%= title %>
+    </title>
+    <style>
+        body {
+            font-family: Arial;
+            padding: 20px;
+        }
+
+        label {
+            display: inline-block;
+            width: 150px;
+            margin-bottom: 10px;
+        }
+
+        input {
+            padding: 5px;
+            width: 200px;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 90%;
+            margin-top: 20px;
+        }
+
+        th,
+        td {
+            border: 1px solid #333;
+            padding: 8px;
+            text-align: center;
+        }
+
+        button.reset {
+            background: red;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>
+        <%= title %>
+    </h1>
+
+    <!-- FORM INPUT -->
+    <form action="/input" method="POST">
+        <label for="month">Bulan:</label>
+        <input type="text" id="month" name="month" placeholder="Contoh: Januari" required><br><br>
+
+        <label for="quantity">Jumlah Penjualan:</label>
+        <input type="number" id="quantity" name="quantity" placeholder="Masukkan jumlah" required><br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <!-- RESET DATA -->
+    <form action="/reset" method="POST">
+        <button type="submit" class="reset">Reset Data & Mulai Baru</button>
+    </form>
+
+    <% if(data && data.length> 0) { %>
+        <h2>Hasil Forecasting</h2>
+        <table>
+            <tr>
+                <th>Bulan</th>
+                <th>Jumlah Penjualan</th>
+                <th>Forecast</th>
+                <th>Trend</th>
+                <th>Recommendation</th>
+            </tr>
+            <% for(let i=0; i<data.length; i++) { %>
+                <tr>
+                    <td>
+                        <%= data[i].month %>
+                    </td>
+                    <td>
+                        <%= data[i].quantity %>
+                    </td>
+                    <td>
+                        <%= forecast[i] !==null ? Math.round(forecast[i]) : '-' %>
+                    </td>
+                    <td>
+                        <%= trend[i] %>
+                    </td>
+                    <td>
+                        <%= recommendation[i] %>
+                    </td>
+                </tr>
+                <% } %>
+        </table>
+        <% } %>
+</body>
+
+</html>
