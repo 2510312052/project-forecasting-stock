@@ -55,27 +55,51 @@ uas-forecasting-stock/
 ```bash
 git clone https://github.com/username/uas-forecasting-stock.git
 
+---
 
-2. **Install dependencies:**
+### 2. Install Dependencies
+
+Pastikan Node.js sudah terinstall, lalu jalankan:
 
 ```bash
 npm install
+```
 
-3. **Setup database:**
+---
+
+### 3. Setup database
+
 
 ```bash
 npm run db:setup
+```
 
-4. **Jalankan aplikasi:**
+Perintah ini akan menghasilkan file `database.sqlite` secara otomatis.
+
+---
+
+### 4. Menjalankan Aplikasi
 
 ```bash
 npm run dev
+```
 
-5. **Buka browser:**
+Jika berhasil, akan muncul pesan bahwa server berjalan.
 
-```text
+---
+
+### 5. Buka browser
+
+Buka browser dan akses:
+
+```
 http://localhost:3000
+```
 
-📁 Struktur Project
-bash
-npm install
+
+
+## Anggota Kelompok
+
+* Cahaya Nur Hayati (2510312045)
+* Tamam Ahmad Hafizh (2510312052)
+* Rafly Achmad Fahrezzy (2510312057)
